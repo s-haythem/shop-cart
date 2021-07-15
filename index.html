@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Cart</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div><img class="logo" src="./logo.jpg" alt="logo"></div>
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li class="cart">
+                    <a href="#">
+                        <ion-icon name="cart"></ion-icon>
+                        <span>0</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <h1>My Shopping Cart</h1>
+        
+        <div class="shopping-cart">
+
+            <div class="column-labels">
+                <label class="product-image">Image</label>
+                <label class="product-details">Product</label>
+                <label class="product-price">Price</label>
+                <label class="product-quantity">Quantity</label>
+                <label class="product-removal">Remove</label>
+                <label class="">Like</label>
+                <label class="product-line-price">Total</label>
+            </div>
+
+            <div class="product" >
+                <div class="product-image">
+                    <img src="./shirt1.jpg">
+                </div>
+                <div class="product-details">
+                    <div class="product-title">Cutie Panda Hoodie</div>
+                    <p class="product-description">The best The cutest Panda you can ever have </p>
+                </div>
+                <div class="product-price" id="price-1">25.00</div>
+                <div class="product-quantity flex">
+                    <div>
+                        <button onclick="decrement('first')">-</button>
+                    </div>
+                    <div>
+                        <input type="number" id="first" value="1" min="1">
+                    </div>
+                    <div>
+                        <button onclick="increment('first')">+</button>
+                    </div>
+                </div>
+                <div class="product-removal">
+                    <button class="remove-product" onclick="remove('first')">
+                        Remove
+                    </button>
+                </div>
+                <div class="product-removal">
+                    <i id="heart-1" onclick="like('heart-1')" class="fa fa-heart"></i>
+                </div>
+                <div class="product-line-price" id="total-price-1" >25.00</div>
+            </div>
+
+            <div class="product">
+                <div class="product-image">
+                    <img src="./shirt6.jpg">
+                </div>
+                <div class="product-details">
+                    <div class="product-title">Kitty Cat Hoodie</div>
+                    <p class="product-description">Who doesn't like a kitty on his hoodie </p>
+                </div>
+                <div class="product-price" id="price-2">30.00</div>
+                <div class="product-quantity flex">
+                    <div>
+                        <button onclick="decrement('second')">-</button>
+                    </div>
+                    <div>
+                        <input type="number" id="second" value="1" min="1">
+                    </div>
+                    <div>
+                        <button onclick="increment('second')">+</button>
+                    </div>
+                </div>
+                <div class="product-removal">
+                    <button class="remove-product" onclick="remove('second')">
+                        Remove
+                    </button>
+                </div>
+                <div class="product-removal">
+                    <i id="heart-2" onclick="like('heart-2')" class="fa fa-heart"></i>
+                </div>
+                <div class="product-line-price" id="total-price-2">30.00</div>
+            </div>
+
+            <div class="totals">
+                <div class="totals-item">
+                    <label>Total</label>
+                    <div class="totals-value" id="cart-total">55.00</div>
+                </div>
+            </div>
+
+            <button class="checkout" onclick="refresh()">Clear</button>
+
+        </div>
+
+        <svg ></svg>
+
+    </section>
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>
